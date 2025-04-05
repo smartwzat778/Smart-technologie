@@ -1,0 +1,270 @@
+/* تنسيقات عامة */
+body {
+    font-family: 'Tajawal', sans-serif;
+    direction: rtl; /* اتجاه النص للعربية */
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333; /* جعل النص باللون الرمادي الداكن */
+    padding-top: 56px; /* تعويض المسافة بسبب شريط التنقل */
+}
+
+/* شريط التنقل */
+.navbar {
+    background-color: #ff5722 !important; /* استخدام لون برتقالي دافئ */
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #fff !important;
+    margin-left: 1rem;
+    transition: color 0.3s;
+    font-size: 1.2rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f57c00 !important; /* لون أفتح عند التمرير */
+}
+
+
+/* تنسيقات القائمة المنسدلة */
+.navbar-toggler {
+    border: none;
+    background: transparent !important;
+    padding: 0.5rem;
+    cursor: pointer;
+    margin-left: auto; /* نقل الأيقونة إلى اليمين */
+    order: 2; /* تأكد من أنها تظهر في النهاية */
+}
+
+.navbar-toggler i {
+    color: white;
+    font-size: 1.5rem;
+    transition: transform 0.3s; /* إضافة تأثير عند النقر */
+}
+
+#navbar-toggle {
+    display: none; /* إخفاء الـ checkbox */
+}
+
+.navbar-collapse {
+    display: none; /* إخفاء القائمة المنسدلة افتراضيًا */
+    position: absolute;
+    top: 100%; /* تظهر تحت الأيقونة مباشرةً */
+    right: 0;
+    background-color: #ff5722; /* استخدام البرتقالي في القائمة */
+    width: 200px; /* عرض القائمة */
+    z-index: 1000;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem; /* إضافة مساحة داخلية */
+}
+
+#navbar-toggle:checked ~ .navbar-collapse {
+    display: block; /* إظهار القائمة المنسدلة عند الضغط على الأيقونة */
+}
+
+.navbar-nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.navbar-nav .nav-item {
+    margin: 0.5rem 0;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    padding: 0.75rem 1rem; /* زيادة المساحة الداخلية */
+    transition: background-color 0.3s, color 0.3s;
+    display: block; /* جعل الروابط تظهر بشكل عمودي */
+    border-radius: 5px;
+    text-align: right; /* محاذاة النص إلى اليمين */
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: #f57c00;
+}
+
+/* الصفحة الرئيسية */
+.hero-section {
+    background: linear-gradient(to right, #ff5722, #f57c00); /* تدرج برتقالي دافئ */
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* طبقة داكنة لتحسين وضوح النص */
+    z-index: 1;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+}
+
+.hero-section img {
+    max-width: 50%; /* لتقليص حجم الصورة */
+    width: auto;    /* لضبط عرض الصورة بشكل تلقائي مع الحفاظ على نسبة الطول إلى العرض */
+    height: auto;   /* لضبط الارتفاع بشكل تلقائي */
+    border-radius: 10px; /* الحفاظ على الزوايا المدورة */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* الحفاظ على تأثير الظل */
+    display: block;   /* لإلغاء المسافة البيضاء أسفل الصورة */
+    margin: 0 auto;   /* لتوسيط الصورة */
+}
+
+/* قسم الخدمات */
+#services {
+    padding: 4rem 0;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    padding: 2rem;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* قسم من نحن */
+#about {
+    padding: 4rem 0;
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+/* قسم اتصل بنا */
+#contact {
+    padding: 4rem 0;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: auto;
+}
+
+/* تذييل الصفحة */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* زر العودة للأعلى */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+#back-to-top:hover {
+    background-color: #f57c00;
+}
+/* تذييل الصفحة المعدل */
+footer {
+    background-color: #ff5722; /* نفس لون الصفحة */
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.social-icons {
+    margin: 1rem 0;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #f57c00;
+}
+
+.footer-links {
+    margin: 1rem 0;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
